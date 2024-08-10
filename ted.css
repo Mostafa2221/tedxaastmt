@@ -1837,4 +1837,14 @@ input[type="checkbox"]:checked + label + .content {
       left: 35%;
   }
 }
+@media (max-width: 768px) {
+  body {
+      overflow-x: hidden;
+  }
+}
 
+
+html, body {
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
