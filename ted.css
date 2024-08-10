@@ -1842,7 +1842,7 @@ input[type="checkbox"]:checked + label + .content {
       overflow-x: hidden;
   }
   body #logoimg{
-    left: 49%;
+    left: 55%;
     scale: 0.6;
   }
 }
