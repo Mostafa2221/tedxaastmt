@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <title>frontend page</title>
+  <meta name="author" content="Tedx">
+  <meta name="description" content="TEDxAASTMT">
+  <link rel="icon" href="html5.png" type="image/x-icon">
+  <link rel="stylesheet" href="ted.css" type="text/css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/icons@1.0.0/package.json">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  
+  <div id="main" class="main-wrapper">
+    <div class="page event">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+         document.addEventListener('DOMContentLoaded', function () {
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        var barrier = document.getElementById('barrier');
+        var navbarCollapse = document.getElementById('thebar');
+        var menushadow = document.getElementById('menushadow');
+        barrier.style.display = 'none';
+
+        // Listen for the navbar to show
+        navbarCollapse.addEventListener('show.bs.collapse', function () {
+          barrier.style.opacity = '1';
+          barrier.style.display = 'block';
+          menushadow.style.opacity = '0';
+          menushadow.style.display = 'none';
+
+          // Adjust opacity and blur when navbar is fully shown
+           // Adjust opacity when navbar is fully shown
+        });
+
+        // Listen for the navbar to hide
+        navbarCollapse.addEventListener('hide.bs.collapse', function () {
+          barrier.style.opacity = '0';
+          barrier.style.display = 'none';
+          menushadow.style.opacity = '1';
+          menushadow.style.display = 'block';
+          // Hide the collapse if screen width changes
+          
+       
+          // Reset opacity when navbar is fully hidden
+        });
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+              navbarCollapse.classList.remove('show');
+              barrier.style.opacity = '0';
+              barrier.style.display = 'none';
+              menushadow.style.display = 'block';
+              document.getElementById('menushadow').style.opacity = '1';
+            }
+          });
+        
+      });
+      </script>
+      
+   <script>
+    $(document).ready(function() {
+      // Function to handle the navbar collapse event
+      function toggleBodyOverflow() {
+        if ($('.navbar-collapse').hasClass('show')) {
+          $('body').css('overflow-y', 'hidden');
+        } else {
+          $('body').css('overflow-y', 'auto');
+        }
+      }
+  
+      // Attach the event listener to the navbar toggler
+      $('.navbar-toggler').on('click', function() {
+        setTimeout(toggleBodyOverflow, 300); // Delay to wait for the collapse animation
+      });
+  
+      // Attach the event listener to the navbar collapse event
+      $('.navbar-collapse').on('shown.bs.collapse', function() {
+        $('body').css('overflow-y', 'hidden');
+      });
+  
+      $('.navbar-collapse').on('hidden.bs.collapse', function() {
+        $('body').css('overflow-y', 'auto');
+      });
+  
+      // Ensure body overflow is reset when the window is resized
+      $(window).on('resize', function() {
+        if ($(window).width() >= 992) { // Adjust the breakpoint as needed
+          $('body').css('overflow-y', 'auto');
+        }
+      });
+    });
+  </script>
+    <div id="eventbg"> <video autoplay loop muted style="width: 100%;">
+      <source src="eventbg8.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+<img src="tedlogo.svg" alt="tedx logo" loading="lazy" id="eventlogo"><span id="aastmtevent">AASTMT</span><div id="barrier"></div><div id="menushadow"></div></div>
+    <div id="tedxaastmtabout">
+       <div class="row">
+        <div class="col-xl-12 text-light text-center" id="who"> WHO ARE WE?</div>
+       </div>
+       <div class="row">
+        <div class="col-xl-12 text-light text-center" id="explanation">When people hear about us, they wonder, what is it that we do, and what impact do we have on our community. In the most abstract sense, what we basically do is spread ideas that are worthwhile.
+          TEDxAASTMT, The Arab Academy based TEDx entity, believes that the thing about ideas is that they are the only true sustainable thing in our world. They don’t burn, collapse or even fade away. They are eternal. Ideas change lives and widen perspectives.
+          We like to think of our world as some kind of a big puzzle, more like a dot diagram. Each idea or each dot alone doesn’t really hold any meaning. But when you spread these ideas and connect these dots, you will find yourself in front of something extraordinary. This is what we do here at TEDxAASTMT, we help in spreading ideas that are worthwhile. We connect the dots.
+          The belief in the importance of the past and its effect in determining our future is the essence of this year’s theme; our aim is to present diverse ideas that would inspire the audience with thought provoking talks that could link our past, present and future. Also, the world we live in today is a structure of intersecting fields and cultures. The attending audience will be presented with new emerging technologies, enriching new experiences and past lessons that every age of the audience could relate to and aspire to learn and discover. In our event you will witness the dots coming together and connected to represent the different aspects of life that forms the pillars of the new age from technology to history to lifestyle and humanities. 
+           Description = creative idea that is true and brought from filtering idea , we believe which is sustainable in all over the world 🌎 
+          </div>
+       </div>
+       <div class="row">
+        <div class="col-xl-12 text-light text-center" id="orr">OR</div>
+       </div>
+       
+       <div class="row">
+        <div class="col-xl-12 text-danger text-uppercase text-center" id="ideass">Ideas are the sole enduring entities in our world.🌍</div>
+       </div>
+       </div>
+           <!-- <h2>Expected Speakers!</h2> -->
+           <div class="row">
+            <div class="col-md-6">
+                <div class="teamm-member">
+                    <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 1" width="150">
+                    <div class="info">
+                        <h5>Speaker 1</h5>
+                        <p>Position 1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="teamm-member">
+                    <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 2" width="150">
+                    <div class="info">
+                        <h5>Speaker 2</h5>
+                        <p>Position 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="teamm-member">
+                    <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 4" width="150">
+                    <div class="info">
+                        <h5>Speaker 4</h5>
+                        <p>Position 4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="teamm-member">
+                    <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 5" width="150">
+                    <div class="info">
+                        <h5>Speaker 5</h5>
+                        <p>Position 5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+          <div class="col-md-6">
+              <div class="teamm-member">
+                  <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 4" width="150">
+                  <div class="info">
+                      <h5>Speaker 4</h5>
+                      <p>Position 4</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="teamm-member">
+                  <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 5" width="150">
+                  <div class="info">
+                      <h5>Speaker 5</h5>
+                      <p>Position 5</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="col-md-6">
+            <div class="teamm-member">
+                <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 4" width="150">
+                <div class="info">
+                    <h5>Speaker 4</h5>
+                    <p>Position 4</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="teamm-member">
+                <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 5" width="150">
+                <div class="info">
+                    <h5>Speaker 5</h5>
+                    <p>Position 5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="row">
+      <div class="col-md-6">
+          <div class="teamm-member">
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 4" width="150">
+              <div class="info">
+                  <h5>Speaker 4</h5>
+                  <p>Position 4</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="teamm-member">
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 5" width="150">
+              <div class="info">
+                  <h5>Speaker 5</h5>
+                  <p>Position 5</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-md-6">
+        <div class="teamm-member">
+            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 4" width="150">
+            <div class="info">
+                <h5>Speaker 4</h5>
+                <p>Position 4</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="teamm-member">
+            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 5" width="150">
+            <div class="info">
+                <h5>Speaker 5</h5>
+                <p>Position 5</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-6">
+      <div class="teamm-member">
+          <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 4" width="150">
+          <div class="info">
+              <h5>Speaker 4</h5>
+              <p>Position 4</p>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-6">
+      <div class="teamm-member">
+          <img src="https://via.placeholder.com/150" class="img-fluid" alt="Speaker 5" width="150">
+          <div class="info">
+              <h5>Speaker 5</h5>
+              <p>Position 5</p>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="row justify-content-center bg-black text-light" id="Sponsers" style="height: 90vh;">Our Sponsers
+<div class="row">
+  <div class="col-md-3 col-sm-6" id="popup-image">
+      <div class="sponser-cake">
+          <img src="https://via.placeholder.com/150" class="img-fluid"  alt="Sponser 1" width="200" style=" margin-bottom: 10%;">
+
+      </div>
+  </div>
+  <div class="col-md-3 col-sm-6" id="popup-image">
+      <div class="sponser-cake ">
+          <img src="https://via.placeholder.com/150" class="img-fluid" alt="sponser 2" width="200">
+      </div>
+  </div>
+  
+  <div class="col-md-3 col-sm-6" id="popup-image">
+    <div class="sponser-cake">
+        <img src="https://via.placeholder.com/150" class="img-fluid" alt="sponser 2" width="200">
+    
+    </div>
+</div>
+
+  <div class="col-md-3 col-sm-6" id="popup-image">
+      <div class="sponser-cake">
+          <img src="https://via.placeholder.com/150" class="img-fluid" alt="sponser 2" width="200" style="margin-right: 20%;">
+      </div>
+  </div>
+
+
+</div>
+</div>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" style="width: 100%; margin-top: 10%;"><h2>Our Sponsers</h2>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-6">
+            <img class="d-block w-100" src="https://via.placeholder.com/400x400" alt="First slide image 1">
+          </div>
+          <div class="col-6">
+            <img class="d-block w-100" src="https://via.placeholder.com/400x400" alt="First slide image 2">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-6">
+            <img class="d-block w-100" src="https://via.placeholder.com/400x400" alt="Second slide image 1">
+          </div>
+          <div class="col-6">
+            <img class="d-block w-100" src="https://via.placeholder.com/400x400" alt="Second slide image 2">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-6">
+            <img class="d-block w-100" src="https://via.placeholder.com/400x400" alt="Third slide image 1">
+          </div>
+          <div class="col-6">
+            <img class="d-block w-100" src="https://via.placeholder.com/400x400" alt="Third slide image 2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+    <nav class="navbar navbar-expand-lg">
+        <a href="#thebar" data-bs-toggle="collapse" class="navbar-toggler">
+            <span class="navbar-toggler-icon" id="iconn"></span>
+        </a>
+        <div id="thebar" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link"><h2 id="mainitems">Home</h2></a>
+                </li>
+                <li class="nav-item">
+                    <a href="team.html" class="nav-link"><h2 id="mainitems" >Team</h2></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><h2 id="mainitems">Event</h2></a>
+                </li>
+                <li class="nav-item">
+                    <a href="learn-now.html" class="nav-link "><h2 id="mainitems">Learn-now</h2></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><h2 id="mainitems">3 in 3</h2></a>
+                </li>
+            </ul>
+        
+    </nav>
+    <footer class="bg-black" id="fotter">
+         
+        <section class="">
+            <div class="row" >
+              <div class="col-md-10 col-lg-10 col-xl-3 col-sm-12 m-5 " id="tedbottomlogo">
+                <h6 class="text-uppercase fw-bold  " style="width: 100px; height: 20px; margin-left: -30px;" id="details"><img src="tedlogo.svg"><span id="aastmt2">AASTMT</span><span><img src="logoaastmt6.jpg" alt="aastmt logo" style="width: 220px; left: 240px; position: absolute; margin-top: -30px; scale: 0.8;"></span></h6>
+                <span id="x">TEDxAASTMT, The Arab Academy based TEDx entity, believes that the thing about ideas is that they are the only true sustainable thing in our world. They don’t burn, collapse or even fade away. They are eternal. Ideas change lives and widen perspectives.
+                </span>
+              </div>
+              <div class="col-md-5 col-lg-3 col-xl-2 col-sm-6 mx-auto mb-4 mt-4">
+                <h6 class="text-uppercase fw-bold text-center mb-3" id="details">QUICK LINKS</h6>
+                <p class="text-center"><a href="" style="text-decoration: none; " id="detailss" >TED</a></p>
+                <p class="text-center"><a href="" style="text-decoration: none; " id="detailss">TEDX</a></p>
+                <p class="text-center"><a href="" style="text-decoration: none; " id="detailss">TED Blog</a></p>
+                <p class="text-center"><a href="" style="text-decoration: none; " id="detailss">License</a></p>
+              </div>
+    
+            <div class="col-md-5 col-lg-5 col-xl-2 col-sm-6 text-start  mt-5" id="details">
+              <p class="text-center"><a href="" style="text-decoration: none;" id="detailss">Contact Us</a></p>
+              <p class="text-center"><a href="" style="text-decoration: none;" id="detailss">Terms & Conditions</a></p>
+              <p class="text-center"><a href="" style="text-decoration: none;"id="detailss">Privacy Policy</a></p>
+              <p class="text-center"><a href="" style="text-decoration: none;"id="detailss">Get Involved</a></p> 
+            </div>
+            <div class="col-md-10 col-sm-12 col-lg-10 col-xl-4  mt-4">
+              
+              <h6 class="text-uppercase fw-bold text-start mb-3" id="details">STAY CONNECTED</h6>
+                <p class="text-start"><i class='lni lni-map-marker' id="loc" ></i><a href="https://maps.app.goo.gl/h4un1SvC1dtu6UCV7" style="text-decoration: none;" id="lastsection">Al Alameen City, El Alamein, Marsa Matrouh Governorate</a></p>
+                <p class="text-start"><i class='lni lni-phone-set' id="loc" ></i><a href="" style="text-decoration: none;" id="lastsection">+20 102 678 7677</a></p>
+                <p class="text-start"><i class='lni lni-envelope' id="loc" ></i><a href="" style="text-decoration: none;" id="lastsection">tedxaastmtxx@gmail.com</a></p> 
+              <section class="d-grid justify-content-center mt-5" style="scale: 2;">
+              <div id="sc-ic">
+                <a href="" class="me-3 ms-4 "id="details" style="text-decoration: none;">
+                  <i class="bx bxl-facebook" ></i>
+                </a>
+                <a href="" class="me-3"id="details" style="text-decoration: none;">
+                  <i class="bx bxl-twitter" ></i>
+                </a>
+                <a href="" class="me-3"id="details" style="text-decoration: none;">
+                  <i class="bx bxl-google" ></i>
+                </a>
+                <a href="" class="me-5"id="details" style="text-decoration: none;">
+                  <i class="bx bxl-instagram" ></i>
+                </a>
+              </div>
+            </section>
+          </div>
+
+          </div>
+
+        </section>
+      </footer>
+    </div>
+  </div>
+  
+  <div class="transition-logo">
+    <img src="tedlogo.svg" alt="TED Logo" ><span style="position: relative; left: 30%; scale: 4; color: white;" class="trans">AASTMT</span>
+</body>
+</html>

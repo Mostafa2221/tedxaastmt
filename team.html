@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  
+  <link rel="stylesheet" href="ted.css">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/1f602204ab.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <div id="main" class="main-wrapper">
+    <div class="page team">
+    <script>
+        document.querySelectorAll('.accor input[type="checkbox"]').forEach(checkbox => {
+      checkbox.addEventListener('change', (e) => {
+        const targetId = e.target.id;
+        
+        if (e.target.checked) {
+          document.querySelectorAll('.accor input[type="checkbox"]').forEach(cb => {
+            if (cb.id !== targetId) {
+              cb.checked = false;
+            }
+          });
+        }
+      });
+    });
+    
+      </script>
+      
+   <script>
+    $(document).ready(function() {
+      // Function to handle the navbar collapse event
+      function toggleBodyOverflow() {
+        if ($('.navbar-collapse').hasClass('show')) {
+          $('body').css('overflow-y', 'hidden');
+        } else {
+          $('body').css('overflow-y', 'visible');
+        }
+      }
+  
+      // Attach the event listener to the navbar toggler
+      $('.navbar-toggler').on('click', function() {
+        setTimeout(toggleBodyOverflow, 300); // Delay to wait for the collapse animation
+      });
+  
+      // Attach the event listener to the navbar collapse event
+      $('.navbar-collapse').on('shown.bs.collapse', function() {
+        $('body').css('overflow-y', 'hidden');
+      });
+  
+      $('.navbar-collapse').on('hidden.bs.collapse', function() {
+        $('body').css('overflow-y', 'visible');
+      });
+  
+      // Ensure body overflow is reset when the window is resized
+      $(window).on('resize', function() {
+        if ($(window).width() >= 992) { // Adjust the breakpoint as needed
+          $('body').css('overflow-y', 'visible');
+        }
+      });
+    });
+  </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+       var navbarToggler = document.querySelector('.navbar-toggler');
+       var barrier = document.getElementById('barrier');
+       var navbarCollapse = document.getElementById('thebar');
+       var menushadow = document.getElementById('menushadow');
+       barrier.style.display = 'none';
+
+       // Listen for the navbar to show
+       navbarCollapse.addEventListener('show.bs.collapse', function () {
+         barrier.style.opacity = '1';
+         barrier.style.display = 'block';
+         menushadow.style.opacity = '0';
+         menushadow.style.display = 'none';
+
+         // Adjust opacity and blur when navbar is fully shown
+          // Adjust opacity when navbar is fully shown
+       });
+
+       // Listen for the navbar to hide
+       navbarCollapse.addEventListener('hide.bs.collapse', function () {
+         barrier.style.opacity = '0';
+         barrier.style.display = 'none';
+         menushadow.style.opacity = '1';
+         menushadow.style.display = 'block';
+         // Hide the collapse if screen width changes
+         
+      
+         // Reset opacity when navbar is fully hidden
+       });
+       window.addEventListener('resize', function() {
+           if (window.innerWidth > 768) {
+             navbarCollapse.classList.remove('show');
+             barrier.style.opacity = '0';
+             barrier.style.display = 'none';
+             menushadow.style.display = 'block';
+             document.getElementById('menushadow').style.opacity = '1';
+           }
+         });
+       
+     });
+     </script>
+     
+    <div style="position: relative; z-index: 1;" ><img src="tedlogo.svg" alt="tedx logo" loading="lazy" id="logo"><span id="aastmttt">AASTMT</span><div id="barrier"></div><div id="menushadow"></div>
+</div>
+<div style="background-image: url('aboutbg.png'); background-color: black;">
+  <div class="container text-center">
+    
+    <hr class="line" style="color: white; width: 1300px; padding-bottom: 8px;">
+    <div class="row">
+        <h1 class="our">Our Team</h1>
+      <div class="col-lg-4 team-member" id="firstone">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top">Abdallah Hammad</p>
+        <h5 class="prof tracking-out-contract-bck-top">Organizer</h5>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 team-member">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top">Mohamed Magdy</p>
+        <h5 class="prof tracking-out-contract-bck-top">CO-Organizer</h5>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 team-member">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top">Marwan Hany</p>
+        <h5 class="prof tracking-out-contract-bck-top">Executive producer</h5>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      
+      <div class="col-lg-4 team-member">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top">Mohamed Hassan</p>
+        <h5 class="prof tracking-out-contract-bck-top">Director of Marketing 
+        </h5>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      
+      <div class="col-lg-4 team-member">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top"> Mariam Ali
+        </p>
+        <h5 class="prof tracking-out-contract-bck-top">Hr-Head</h5>
+        <ul class="accor">
+          <li>
+            <input type="checkbox" id="member1">
+            <label for="member1">
+              <span class="toggle" data-target="member1"></span> Members
+            </label>
+            <div class="content">
+              <p>Zainab Waleed<br>
+                Norah<br>
+                Omnia<br>
+                Razan<br>
+            </div>
+          </li>
+          </ul>
+       
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 team-member">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top">Saleh Hassan</p>
+        <h5 class="prof tracking-out-contract-bck-top">Coaching</h5>
+        <ul class="accor">
+          <li>
+            <input type="checkbox" id="member2">
+            <label for="member2">
+              <span class="toggle" data-target="member2"></span> Members
+            </label>
+            <div class="content">
+              <p>lorem
+            </div>
+          </li>
+          </ul>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 team-member">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top">Hamza</p>
+        <h5 class="prof tracking-out-contract-bck-top">O&O </h5>
+        <ul class="accor">
+          <li>
+            <input type="checkbox" id="member3">
+            <label for="member3">
+              <span class="toggle" data-target="member3"></span> Members
+            </label>
+            <div class="content">
+              <p>Mohamed Saber<br>
+                Mohamed Hany<br>
+                Ahmed Hany<br>
+                El-Sakkar<br>
+                Zeyad Hasan<br>
+                Khaled Wael<br>
+                Momen<br>
+                Maysoon<br>
+                Omar Shahin<br>
+                Omar momen<br>
+                Yahya<br>
+                Hanaa Ayman<br>
+                Shehab<br>
+                Alaa Jamal</p>
+            </div>
+          </li>
+          </ul>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 team-member">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top">Rokaya Mohamed</p>
+        <h5 class="prof tracking-out-contract-bck-top">Photography </h5>
+        <ul class="accor">
+          <li>
+            <input type="checkbox" id="member4">
+            <label for="member4">
+              <span class="toggle" data-target="member4"></span> Members
+            </label>
+            <div class="content">
+              <p>Youssef Abdelnaby<br>
+                Amr Al-Tamimi</p>
+            </div>
+          </li>
+          </ul>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 team-member">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top">Ismail Jalal</p>
+        <h5 class="prof tracking-out-contract-bck-top"> Video Editing </h5>
+        <ul class="accor">
+          <li>
+            <input type="checkbox" id="member5">
+            <label for="member5">
+              <span class="toggle" data-target="member5"></span> Members
+            </label>
+            <div class="content">
+              <p>Aaryan<br>
+                Ahd<br>
+                Ahmed Ragab</p>
+            </div>
+          </li>
+          </ul>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 team-member">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top">Lorem</p>
+        <h5 class="prof tracking-out-contract-bck-top"> Public Relations </h5>
+        <ul class="accor">
+          <li>
+            <input type="checkbox" id="member6">
+            <label for="member6">
+              <span class="toggle" data-target="member6"></span> Members
+            </label>
+            <div class="content">
+              <p>Areeg<br>
+                Farah Mahmoud<br>
+                Login Ahmed<br>
+                Shorok Elmogy<br>
+                Abdallah Ragab<br>
+                Rawda Mohamed <br>
+                W.d Salih<br>
+                Yara</p>
+            </div>
+          </li>
+          </ul>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 team-member">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top">Yaser</p>
+        <h5 class="prof tracking-out-contract-bck-top"> Graphic Design </h5>
+        <ul class="accor">
+          <li>
+            <input type="checkbox" id="member7">
+            <label for="member7">
+              <span class="toggle" data-target="member7"></span> Members
+            </label>
+            <div class="content">
+              <p>Ahmed Radwan<br>
+                Alan<br>
+                Mahmoud El-Shamy<br>
+                Rokaya Mohamed<br>
+                Sirach<br>
+                Hager Saifalnasr</p>
+            </div>
+          </li>
+          </ul>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 team-member">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top">Mohamed hasan</p>
+        <h5 class="prof tracking-out-contract-bck-top"> Marketing </h5>
+        <ul class="accor">
+          <li>
+            <input type="checkbox" id="member8">
+            <label for="member8">
+              <span class="toggle" data-target="member8"></span> Members
+            </label>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, doloribus! Voluptatum laborum debitis voluptatem deserunt commodi neque aliquam eos nesciunt dolore minus sapiente velit nobis, perferendis rerum maiores placeat iure?</p>
+            </div>
+          </li>
+          </ul>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 team-member ">
+        <img src="https://via.placeholder.com/800" class="img_col flip-in-hor-bottom" alt="">
+        <p class="name tracking-out-contract-bck-top">Mr.Aly Taha</p>
+        <h5 class="prof tracking-out-contract-bck-top"> IT </h5>
+        <ul class="accor">
+          <li>
+            <input type="checkbox" id="member9">
+            <label for="member9">
+              <span class="toggle" data-target="member9"></span> Members
+            </label>
+            <div class="content">
+              <p>Mustafa alaa</p>
+            </div>
+          </li>
+          </ul>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      
+
+   
+     
+    </div>
+  </div>
+</div>
+  <nav class="navbar navbar-expand-lg" style="background-color: black;">
+    
+    <a href="#thebar" data-bs-toggle="collapse" class="navbar-toggler">
+        <span class="navbar-toggler-icon" id="iconn"></span>
+    </a>
+    <div id="thebar" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="home.html" class="nav-link"><h2 id="mainitems">Home</h2></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link"><h2 id="mainitems" >Team</h2></a>
+            </li>
+            <li class="nav-item">
+                <a href="eventpage.html" class="nav-link"><h2 id="mainitems">Event</h2></a>
+            </li>
+            <li class="nav-item">
+                <a href="learn-now.html" class="nav-link "><h2 id="mainitems">Learn-now</h2></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link"><h2 id="mainitems">3 in 3</h2></a>
+            </li>
+        </ul>
+    
+</nav>
+<footer class="bg-black" id="fotter">
+     
+    <section class="">
+        <div class="row" >
+          <div class="col-md-10 col-lg-10 col-xl-3 col-sm-12 m-5 " id="tedbottomlogo">
+            <h6 class="text-uppercase fw-bold  " style="width: 100px; height: 20px; margin-left: -30px;" id="details"><img src="tedlogo.svg"><span id="aastmt2">AASTMT</span><span><img src="logoaastmt6.jpg" alt="aastmt logo" style="width: 220px; left: 240px; position: absolute; margin-top: -30px; scale: 0.8;"></span></h6>
+            <span id="x">TEDxAASTMT, The Arab Academy based TEDx entity, believes that the thing about ideas is that they are the only true sustainable thing in our world. They don’t burn, collapse or even fade away. They are eternal. Ideas change lives and widen perspectives.
+            </span>
+          </div>
+          <div class="col-md-5 col-lg-3 col-xl-2 col-sm-6 mx-auto mb-4 mt-4">
+            <h6 class="text-uppercase fw-bold text-center mb-3" id="details">QUICK LINKS</h6>
+            <p class="text-center"><a href="" style="text-decoration: none; " id="detailss" >TED</a></p>
+            <p class="text-center"><a href="" style="text-decoration: none; " id="detailss">TEDX</a></p>
+            <p class="text-center"><a href="" style="text-decoration: none; " id="detailss">TED Blog</a></p>
+            <p class="text-center"><a href="" style="text-decoration: none; " id="detailss">License</a></p>
+          </div>
+
+        <div class="col-md-5 col-lg-5 col-xl-2 col-sm-6 text-start  mt-5" id="details">
+          <p class="text-center"><a href="" style="text-decoration: none;" id="detailss">Contact Us</a></p>
+          <p class="text-center"><a href="" style="text-decoration: none;" id="detailss">Terms & Conditions</a></p>
+          <p class="text-center"><a href="" style="text-decoration: none;"id="detailss">Privacy Policy</a></p>
+          <p class="text-center"><a href="" style="text-decoration: none;"id="detailss">Get Involved</a></p> 
+        </div>
+        <div class="col-md-10 col-sm-12 col-lg-10 col-xl-4  mt-4">
+          
+          <h6 class="text-uppercase fw-bold text-start mb-3" id="details">STAY CONNECTED</h6>
+            <p class="text-start"><i class='lni lni-map-marker' id="loc" ></i><a href="https://maps.app.goo.gl/h4un1SvC1dtu6UCV7" style="text-decoration: none;" id="lastsection">Al Alameen City, El Alamein, Marsa Matrouh Governorate</a></p>
+            <p class="text-start"><i class='lni lni-phone-set' id="loc" ></i><a href="" style="text-decoration: none;" id="lastsection">+20 102 678 7677</a></p>
+            <p class="text-start"><i class='lni lni-envelope' id="loc" ></i><a href="" style="text-decoration: none;" id="lastsection">tedxaastmtxx@gmail.com</a></p> 
+          <section class="d-grid justify-content-center mt-5" style="scale: 2;">
+          <div id="sc-ic">
+            <a href="" class="me-3 ms-4 "id="details" style="text-decoration: none;">
+              <i class="bx bxl-facebook" ></i>
+            </a>
+            <a href="" class="me-3"id="details" style="text-decoration: none;">
+              <i class="bx bxl-twitter" ></i>
+            </a>
+            <a href="" class="me-3"id="details" style="text-decoration: none;">
+              <i class="bx bxl-google" ></i>
+            </a>
+            <a href="" class="me-5"id="details" style="text-decoration: none;">
+              <i class="bx bxl-instagram" ></i>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      </div>
+
+    </section>
+  </footer>
+      </div>
+  </div>
+      <div class="transition-logo">
+        <img src="tedlogo.svg" alt="TED Logo" ><span style="position: relative; left: 30%; scale: 4; color: white;" class="trans">AASTMT</span>
+    </div>
+</body>
+</html>

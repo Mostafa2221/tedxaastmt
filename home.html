@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <title>frontend page</title>
+  <meta name="author" content="Tedx">
+  <meta name="description" content="TEDxAASTMT">
+  <link rel="icon" href="html5.png" type="image/x-icon">
+  <link rel="stylesheet" href="ted.css" type="text/css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+  <div id="main" class="main-wrapper">
+    <div class="page home">
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        var barrier = document.getElementById('barrier');
+        var navbarCollapse = document.getElementById('thebar');
+        var menushadow = document.getElementById('menushadow');
+        barrier.style.display = 'none';
+
+        // Listen for the navbar to show
+        navbarCollapse.addEventListener('show.bs.collapse', function () {
+          barrier.style.opacity = '1';
+          barrier.style.display = 'block';
+          menushadow.style.opacity = '0';
+          menushadow.style.display = 'none';
+
+          // Adjust opacity and blur when navbar is fully shown
+           // Adjust opacity when navbar is fully shown
+        });
+
+        // Listen for the navbar to hide
+        navbarCollapse.addEventListener('hide.bs.collapse', function () {
+          barrier.style.opacity = '0';
+          barrier.style.display = 'none';
+          menushadow.style.opacity = '1';
+          menushadow.style.display = 'block';
+          // Hide the collapse if screen width changes
+          
+       
+          // Reset opacity when navbar is fully hidden
+        });
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+              navbarCollapse.classList.remove('show');
+              barrier.style.opacity = '0';
+              barrier.style.display = 'none';
+              menushadow.style.display = 'block';
+              document.getElementById('menushadow').style.opacity = '1';
+            }
+          });
+        
+      });
+
+      
+      
+    </script>
+   <script>
+  $(document).ready(function() {
+    // Function to handle the navbar collapse event
+    function toggleBodyOverflow() {
+      if ($('.navbar-collapse').hasClass('show')) {
+        $('body').css('overflow-y', 'hidden');
+      } else {
+        $('body').css('overflow-y', 'auto');
+      }
+    }
+
+    // Attach the event listener to the navbar toggler
+    $('.navbar-toggler').on('click', function() {
+      setTimeout(toggleBodyOverflow, 300); // Delay to wait for the collapse animation
+    });
+
+    // Attach the event listener to the navbar collapse event
+    $('.navbar-collapse').on('shown.bs.collapse', function() {
+      $('body').css('overflow-y', 'hidden');
+    });
+
+    $('.navbar-collapse').on('hidden.bs.collapse', function() {
+      $('body').css('overflow-y', 'auto');
+    });
+
+    // Ensure body overflow is reset when the window is resized
+    $(window).on('resize', function() {
+      if ($(window).width() >= 992) { // Adjust the breakpoint as needed
+        $('body').css('overflow-y', 'auto');
+      }
+    });
+  });
+</script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minsEl = document.getElementById("mins");
+      const secondsEl = document.getElementById("seconds");
+  
+      const newYearTime = new Date("2024-09-01T13:30:00");
+  
+      function updateAllCountdowns() {
+        const currentDate = new Date();
+        const totalSeconds = (newYearTime - currentDate) / 1000;
+  
+        const days = Math.floor(totalSeconds / 3600 / 24);
+        const hours = Math.floor(totalSeconds / 3600) % 24;
+        const mins = Math.floor(totalSeconds / 60) % 60;
+        const seconds = Math.floor(totalSeconds) % 60;
+  
+        const values = {
+          days: formatTime(days),
+          hours: formatTime(hours),
+          mins: formatTime(mins),
+          seconds: formatTime(seconds)
+        };
+  
+        updateCountdownElement(daysEl, values.days);
+        updateCountdownElement(hoursEl, values.hours);
+        updateCountdownElement(minsEl, values.mins);
+        updateCountdownElement(secondsEl, values.seconds);
+      }
+  
+      function updateCountdownElement(element, value) {
+        const currTop = element.querySelector(".count.curr.top");
+        const currBottom = element.querySelector(".count.curr.bottom");
+        const nextTop = element.querySelector(".count.next.top");
+        const nextBottom = element.querySelector(".count.next.bottom");
+  
+        if (currTop.innerText !== value) {
+          nextTop.innerText = value;
+          nextBottom.innerText = value;
+  
+          element.classList.remove("flip");
+  
+          setTimeout(() => {
+            element.classList.add("flip");
+  
+            setTimeout(() => {
+              currTop.innerText = value;
+              currBottom.innerText = value;
+              element.classList.remove("flip");
+            }, 250);
+          }, 50);
+        }
+      }
+  
+      function formatTime(time) {
+        return time < 10 ? `0${time}` : time;
+      }
+  
+      updateAllCountdowns();
+      setInterval(updateAllCountdowns, 1000);
+    });
+  </script>
+    <div style="background-image: url('mainbg2.png'); background-repeat: no-repeat;" id="homebg"><img src="tedlogo.svg" alt="tedx logo" loading="lazy" id="logo"><span id="aastmt">AASTMT</span><div id="barrier"></div><div id="menushadow"></div><span id="slogan">#Pioneering the Next Era of Change🌍</span></div>
+    <div id="aboutbg"><img src="aboutbg.png" id="aboutbg"><span id="theabout">About TEDx, x = independently organized event</span><span id="aboutdesc">In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.) <img src="lightted2.png" id="lightimg"></span>
+    <span id="aboutted">About TED</span><span id="abouteddesc">TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.<br><br>
+
+        The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media initiatives include TED.com, where new TED Talks are posted daily; TED Translators, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational initiative TED-Ed. TED has established The Audacious Project that takes a collaborative approach to funding ideas with the potential to create change at thrilling scale; TEDx, which supports individuals or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities.<br><br>
+        
+        Follow TED on Twitter at <a href="#" id="tedlinks">http://twitter.com/TEDTalks</a>, or on Facebook at <a href="#" id="tedlinks">http://www.facebook.com/TED</a>.<img src="tedimg.webp" id="tedoimg"></span>
+      </div>
+      <nav class="navbar navbar-expand-lg ">
+        <a href="#thebar" data-bs-toggle="collapse" class="navbar-toggler">
+            <span class="navbar-toggler-icon" id="iconn"></span>
+        </a>
+        <div id="thebar" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><h2 id="mainitems">Home</h2></a>
+                </li>
+                <li class="nav-item">
+                    <a href="team.html" class="nav-link"><h2 id="mainitems" >Team</h2></a>
+                </li>
+                <li class="nav-item">
+                    <a href="eventpage.html" class="nav-link"><h2 id="mainitems">Event</h2></a>
+                </li>
+                <li class="nav-item">
+                    <a href="learn-now.html" class="nav-link "><h2 id="mainitems">Learn-now</h2></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><h2 id="mainitems">3 in 3</h2></a>
+                </li>
+            </ul>
+        
+    </nav>
+      <div> 
+        <div class="row" id="eventcount"><h1>COUNTDOWN</h1></div>
+        <main>
+          <div id="countdown">
+            <div class="countdown__container">
+              <div class="countdown__el">
+                <div class="countdown__time flip" id="days">
+                  <span class="count curr top">00</span>
+                  <span class="count next top">00</span>
+                  <span class="count curr bottom">00</span>
+                  <span class="count next bottom">00</span>
+                </div>
+                <span class="countdown__label">Days</span>
+              </div>
+              <div class="countdown__el">
+                <div class="countdown__time flip" id="hours">
+                  <span class="count curr top">00</span>
+                  <span class="count next top">00</span>
+                  <span class="count curr bottom">00</span>
+                  <span class="count next bottom">00</span>
+                </div>
+                <span class="countdown__label">Hours</span>
+              </div>
+              <div class="countdown__el">
+                <div class="countdown__time flip" id="mins">
+                  <span class="count curr top">00</span>
+                  <span class="count next top">00</span>
+                  <span class="count curr bottom">00</span>
+                  <span class="count next bottom">00</span>
+                </div>
+                <span class="countdown__label">Minutes</span>
+              </div>
+              <div class="countdown__el">
+                <div class="countdown__time flip" id="seconds">
+                  <span class="count curr top">00</span>
+                  <span class="count next top">00</span>
+                  <span class="count curr bottom">00</span>
+                  <span class="count next bottom">00</span>
+                </div>
+                <span class="countdown__label">Seconds</span>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div class="loader">
+          <div class="loader__bar"></div>
+          <div class="loader__bar"></div>
+          <div class="loader__bar"></div>
+          <div class="loader__bar"></div>
+          <div class="loader__bar"></div>
+          <div class="loader__ball"></div>
+        </div>
+      </div>
+     
+       <div id="aboutbg2"><img src="aboutbg.png" ></div>
+        
+        <footer class="bg-black" id="fotter">
+         
+          <section class="">
+              <div class="row" >
+                <div class="col-md-10 col-lg-10 col-xl-3 col-sm-12 m-5 " id="tedbottomlogo">
+                  <h6 class="text-uppercase fw-bold  " style="width: 100px; height: 20px; margin-left: -30px;" id="details"><img src="tedlogo.svg"><span id="aastmt2">AASTMT</span><span><img src="logoaastmt6.jpg" alt="aastmt logo" style="width: 220px; left: 240px; position: absolute; margin-top: -30px; scale: 0.8;"></span></h6>
+                  <span id="x">TEDxAASTMT, The Arab Academy based TEDx entity, believes that the thing about ideas is that they are the only true sustainable thing in our world. They don’t burn, collapse or even fade away. They are eternal. Ideas change lives and widen perspectives.
+                  </span>
+                </div>
+                <div class="col-md-5 col-lg-3 col-xl-2 col-sm-6 mx-auto mb-4 mt-4">
+                  <h6 class="text-uppercase fw-bold text-center mb-3" id="details">QUICK LINKS</h6>
+                  <p class="text-center"><a href="" style="text-decoration: none; " id="detailss" >TED</a></p>
+                  <p class="text-center"><a href="" style="text-decoration: none; " id="detailss">TEDX</a></p>
+                  <p class="text-center"><a href="" style="text-decoration: none; " id="detailss">TED Blog</a></p>
+                  <p class="text-center"><a href="" style="text-decoration: none; " id="detailss">License</a></p>
+                </div>
+      
+              <div class="col-md-5 col-lg-5 col-xl-2 col-sm-6 text-start  mt-5" id="details">
+                <p class="text-center"><a href="" style="text-decoration: none;" id="detailss">Contact Us</a></p>
+                <p class="text-center"><a href="" style="text-decoration: none;" id="detailss">Terms & Conditions</a></p>
+                <p class="text-center"><a href="" style="text-decoration: none;"id="detailss">Privacy Policy</a></p>
+                <p class="text-center"><a href="" style="text-decoration: none;"id="detailss">Get Involved</a></p> 
+              </div>
+              <div class="col-md-10 col-sm-12 col-lg-10 col-xl-4  mt-4">
+                
+                <h6 class="text-uppercase fw-bold text-start mb-3" id="details">STAY CONNECTED</h6>
+                  <p class="text-start"><i class='lni lni-map-marker' id="loc" ></i><a href="https://maps.app.goo.gl/h4un1SvC1dtu6UCV7" style="text-decoration: none;" id="lastsection">Al Alameen City, El Alamein, Marsa Matrouh Governorate</a></p>
+                  <p class="text-start"><i class='lni lni-phone-set' id="loc" ></i><a href="" style="text-decoration: none;" id="lastsection">+20 102 678 7677</a></p>
+                  <p class="text-start"><i class='lni lni-envelope' id="loc" ></i><a href="" style="text-decoration: none;" id="lastsection">tedxaastmtxx@gmail.com</a></p> 
+                <section class="d-grid justify-content-center mt-5" style="scale: 2;">
+                <div id="sc-ic">
+                  <a href="" class="me-3 ms-4 "id="details" style="text-decoration: none;">
+                    <i class="bx bxl-facebook" ></i>
+                  </a>
+                  <a href="" class="me-3"id="details" style="text-decoration: none;">
+                    <i class="bx bxl-twitter" ></i>
+                  </a>
+                  <a href="" class="me-3"id="details" style="text-decoration: none;">
+                    <i class="bx bxl-google" ></i>
+                  </a>
+                  <a href="" class="me-5"id="details" style="text-decoration: none;">
+                    <i class="bx bxl-instagram" ></i>
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            </div>
+
+          </section>
+        </footer>
+        
+      </div>
+      </div>
+  
+  <div class="transition-logo">
+    <img src="tedlogo.svg" alt="TED Logo" ><span style="position: relative; left: 30%; scale: 4; color: white;" class="trans">AASTMT</span>
+</div>
+</body>
+</html>

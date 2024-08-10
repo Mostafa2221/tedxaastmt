@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <title>frontend page</title>
+  <meta name="author" content="Tedx">
+  <meta name="description" content="TEDxAASTMT">
+  <link rel="icon" href="html5.png" type="image/x-icon">
+  <link rel="stylesheet" href="ted.css" type="text/css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/icons@1.0.0/package.json">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <div id="main" class="main-wrapper">
+    <div class="page learn-now">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+       var navbarToggler = document.querySelector('.navbar-toggler');
+       var barrier = document.getElementById('barrier');
+       var navbarCollapse = document.getElementById('thebar');
+       var menushadow = document.getElementById('menushadow');
+       barrier.style.display = 'none';
+
+       // Listen for the navbar to show
+       navbarCollapse.addEventListener('show.bs.collapse', function () {
+         barrier.style.opacity = '1';
+         barrier.style.display = 'block';
+         menushadow.style.opacity = '0';
+         menushadow.style.display = 'none';
+
+         // Adjust opacity and blur when navbar is fully shown
+          // Adjust opacity when navbar is fully shown
+       });
+
+       // Listen for the navbar to hide
+       navbarCollapse.addEventListener('hide.bs.collapse', function () {
+         barrier.style.opacity = '0';
+         barrier.style.display = 'none';
+         menushadow.style.opacity = '1';
+         menushadow.style.display = 'block';
+         // Hide the collapse if screen width changes
+         
+      
+         // Reset opacity when navbar is fully hidden
+       });
+       window.addEventListener('resize', function() {
+           if (window.innerWidth > 768) {
+             navbarCollapse.classList.remove('show');
+             barrier.style.opacity = '0';
+             barrier.style.display = 'none';
+             menushadow.style.display = 'block';
+             document.getElementById('menushadow').style.opacity = '1';
+           }
+         });
+       
+     });
+     </script>
+     
+   <script>
+    $(document).ready(function() {
+      // Function to handle the navbar collapse event
+      function toggleBodyOverflow() {
+        if ($('.navbar-collapse').hasClass('show')) {
+          $('body').css('overflow-y', 'hidden');
+        } else {
+          $('body').css('overflow-y', 'auto');
+        }
+      }
+  
+      // Attach the event listener to the navbar toggler
+      $('.navbar-toggler').on('click', function() {
+        setTimeout(toggleBodyOverflow, 300); // Delay to wait for the collapse animation
+      });
+  
+      // Attach the event listener to the navbar collapse event
+      $('.navbar-collapse').on('shown.bs.collapse', function() {
+        $('body').css('overflow-y', 'hidden');
+      });
+  
+      $('.navbar-collapse').on('hidden.bs.collapse', function() {
+        $('body').css('overflow-y', 'auto');
+      });
+  
+      // Ensure body overflow is reset when the window is resized
+      $(window).on('resize', function() {
+        if ($(window).width() >= 992) { // Adjust the breakpoint as needed
+          $('body').css('overflow-y', 'auto');
+        }
+      });
+    });
+  </script>
+     <div style="background-image: url('learnnowbg0.jpeg'); background-repeat: no-repeat;" id="Learn-nowbg"><img src="tedlogo.svg" alt="tedx logo" loading="lazy" id="logo"><span id="aastmt">AASTMT</span><div id="barrier"></div><div id="menushadow"></div><span id="sloganlel">What should i start with?</span><span id="firstdialoug">Despite the multiplicity of learning sources and the availability of many courses that allow you to learn anything you want, this multiplicity is not very useful because it often causes distraction for the learner and makes them delay in determining where to start and how much information they need to store in their field.<br><br>Therefore, this department was designed, which contains specific paths that you follow to learn the skills required in the market, such as Digital Marketing, Graphic Design, Programming, Public Relations, and Human Resources.<br><br>While determining the paths, specific specifications of the sources were taken into account:
+      <br><br>
+      <ol>
+        <li>It should include beginner level and above.</li>
+        <li>The sources must be free.</li>
+        <li>It must be in Arabic or English</li>
+      </ol></span>
+     <span id="firstdialougg">
+      Important Note: This path will get you started learning the field through reliable sources, but in order to achieve the greatest benefit and progress, you must:
+      <ol>
+        <li>Follow famous people in this field on social media and take their advice.</li>
+        <li>Try to apply the theoretical part that you have learned. This can be done by applying for a job or training in a company or volunteer work close to your field.</li>
+        </ol>
+      </span>
+     <div class="book">
+        <div class="book__pg-shadow"></div>
+        <div class="book__pg"></div>
+        <div class="book__pg book__pg--2"></div>
+        <div class="book__pg book__pg--3"></div>
+        <div class="book__pg book__pg--4"></div>
+        <div class="book__pg book__pg--5"></div>
+    </div>
+    </div>
+    <div style="background-color: rgb(50, 50, 50);">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-md-6  col-xl-3 col-sm-12 mt-5" id="learncontent1">
+                    <h1 id="learncontent1h1">Digital Marketing</h1>
+                    <p id="learncontent1p">Digital marketing is the use of the Internet to reach consumers. Digital marketing is a broad field, including attracting customers via email, content marketing, search platforms, social media, and more.</p>
+                    <a href="digitalmarketing.html" id="learncontent1a" style=" color: red;">Learn More</a>
+                </div>
+                <div class="col-md-6  col-xl-3 col-sm-12 mt-5" id="learncontent2">
+                    <h1 id="learncontent2h1">Graphic Design</h1>
+                    <p id="learncontent2p">Graphic design is the process of visual communication and problem-solving through the use of typography, photography, iconography, and illustration.</p>
+                    <a href="graphicdesign.html" id="learncontent2a" style=" color: red;">Learn More</a>
+                </div>
+                <div class="col-md-6  col-xl-3 col-sm-12 mt-5" id="learncontent3">
+                    <h1 id="learncontent3h1">Programming</h1>
+                    <p id="learncontent3p">Programming is the process of creating a set of instructions that tell a computer how to perform a task. Programming can be done using a variety of computer languages, such as SQL, Java, Python, and C++.</p>
+                    <a href="programming.html" id="learncontent3a" style=" color: red;">Learn More</a>
+                </div>
+                <div class="col-md-6  col-xl-3 col-sm-12 mt-5" id="learncontent4">
+                    <h1 id="learncontent4h1">Public Relations</h1>
+                    <p id="learncontent4p">Public relations is the practice of managing the spread of information between an individual or an organization and the public. Public relations may include an organization or individual gaining exposure to their audiences using topics of public interest and news items that do not require direct payment.</p>
+                    <a href="publicrelations.html" id="learncontent4a" style=" color: red;">Learn More</a>
+                </div>
+                <hr id="hr1">
+    </div>
+       <div class="row text-white">
+                <div class="col-md-6  col-xl-3 col-sm-12" id="learncontent5">
+                    <h1 id="learncontent5h1">Human Resources</h1>
+                    <p id="learncontent5p">Human resources is the set of people who make up the workforce of an organization, business sector, industry, or economy. A narrower concept is human capital, the knowledge which the individuals embody.</p>
+                    <a href="humanresources.html" id="learncontent5a" style=" color: red;">Learn More</a>
+                </div>
+       </div>
+        </div>
+      </div>
+      <br><br><br> 
+        <div id="learncontent">
+        <div class="row justify-content-center text-succesful" style="scale: 2.5;">Digital Markting Path</div>
+        <br><br><br>
+        <div class="row justify-content-center bg-white">
+          <div class="col-md-3 col-sm-6 col-xl-3 ms-4" id="popup-image">
+            <div id="marketingimg">
+                <img src="google5.jpg" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+                <p style="margin-top: 10px;">Fundamentals of digital marketing course from Google:
+Available in Arabic and English.
+                </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image">
+            <div id="marketingimg">
+                <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+                <p style="margin-top: 10px;">Digital Marketing course from YouTube:
+Available in Arabic only.
+</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image" >
+          <div id="marketingimg">
+              <img src="hubspot.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+              <p style="margin-top: 10px;"> Content marketing course from HubSpot:
+              Available in English only.
+              </p>
+          </div>
+      </div>
+    </div>
+    <br><br><br>
+    <div class="row justify-content-center bg-white">
+      <div class="col-md-3 col-sm-6 col-xl-3 ms-4" id="popup-image">
+        <div id="marketingimg">
+            <img src="hubspot.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+            <p style="margin-top: 10px;"> Social Media marketing course from HubSpot:
+Available in English only.
+            </p>
+
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image">
+        <div id="marketingimg">
+            <img src="hubspot.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+            <p style="margin-top: 10px;"> Facebook Ads course from HubSpot:
+Available in English only.
+            </p>
+
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image">
+      <div id="marketingimg">
+          <img src="hubspot.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+          <p style="margin-top: 10px;"> SEO course from HubSpot:
+          Available in English only.
+          </p>
+      </div>
+  </div>
+</div>
+<div class="row justify-content-center text-succesful" style="scale: 2.5; margin-top: 100px;">Graphic Designer Path</div>
+<br><br><br>
+<div class="row justify-content-center bg-white">
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-4" id="popup-image">
+    <div id="marketingimg">
+        <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Photoshop course for beginners:
+          Available in English.
+          
+        </p>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image">
+    <div id="marketingimg">
+        <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Photoshop basics course:
+          Available in English.
+          
+</p>
+    </div>
+</div>
+<div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image" >
+  <div id="marketingimg">
+      <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+      <p style="margin-top: 10px;"> A complete Photoshop course for beginners:
+        Available in Arabic.
+        
+      </p>
+  </div>
+</div>
+</div>
+<br><br><br>
+<div class="row justify-content-center bg-white">
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-4" id="popup-image">
+    <div id="marketingimg">
+        <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Advanced Photoshop lessons course:
+          Available in Arabic.
+          
+        </p>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image">
+    <div id="marketingimg">
+        <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Social media designs course:
+          Available in Arabic.
+          
+</p>
+    </div>
+</div>
+<div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image" >
+  <div id="marketingimg">
+      <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+      <p style="margin-top: 10px;"> Course on the basics of blending in Photoshop:
+        Available in Arabic.
+        
+      </p>
+  </div>
+</div>
+</div>
+<br><br><br>
+<div class="row justify-content-center bg-white">
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-4" id="popup-image">
+    <div id="marketingimg">
+        <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Social media design criticism course:
+          Available in Arabic.
+          
+        </p>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image">
+    <div id="marketingimg">
+        <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Graphic designer course:
+          Available in English.
+          
+</p>
+    </div>
+</div>
+<div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image" >
+  <div id="marketingimg">
+      <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+      <p style="margin-top: 10px;"> Advanced Photoshop lessons course:
+        Available in English.
+        
+        
+      </p>
+  </div>
+</div>
+</div>
+<br><br><br>
+<div class="row justify-content-center bg-white">
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-4" id="popup-image">
+    <div id="marketingimg">
+        <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Glow effect course:
+          Available in English.
+          
+        </p>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center text-succesful" style="scale: 2.5; margin-top: 100px;">Human Resources Path</div>
+<br><br><br>
+<div class="row justify-content-center bg-white">
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-4" id="popup-image">
+    <div id="marketingimg">
+        <img src="edraak.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Human Resource Management Principles course from Edraak. It is available in Arabic only
+          
+        </p>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image">
+    <div id="marketingimg">
+        <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Human Resources Diploma from YouTube. It is available in Arabic only
+</p>
+    </div>
+</div>
+<div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image" >
+  <div id="marketingimg">
+      <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+      <p style="margin-top: 10px;"> Human Resources Basics from YouTube. It is available in English only
+      </p>
+  </div>
+</div>
+</div>
+<br><br><br>
+<div class="row justify-content-center bg-white">
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-4" id="popup-image">
+    <div id="marketingimg">
+        <img src="future.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Fundamentals of Human Resources course from Future Learn. It is available in English only
+          
+        </p>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center text-succesful" style="scale: 2.5; margin-top: 100px;">Puplic Relations Path</div>
+<br><br><br>
+<div class="row justify-content-center bg-white">
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-4" id="popup-image">
+    <div id="marketingimg">
+        <img src="biola.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Introduction to Public Relations course from Biola University. It is available in English only
+        </p>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image">
+    <div id="marketingimg">
+        <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Introduction to public relations course. It is available in English only
+</p>
+    </div>
+</div>
+<div class="col-md-3 col-sm-6 col-xl-3 ms-5" id="popup-image" >
+  <div id="marketingimg">
+      <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+      <p style="margin-top: 10px;"> Public relations course. It is available in Arabic only
+      </p>
+  </div>
+</div>
+</div>
+<br><br><br>
+<div class="row justify-content-center bg-white">
+  <div class="col-md-3 col-sm-6 col-xl-3 ms-4" id="popup-image">
+    <div id="marketingimg">
+        <img src="youtube.png" class="img-fluid" alt="sponser 2" style="width: 360px; height: 170px; border-radius: 10%;">
+        <p style="margin-top: 10px;">Public relations management course. It is available in Arabic only
+          
+        </p>
+    </div>
+  </div>
+</div>
+    </div>
+
+    
+     <nav class="navbar navbar-expand-lg">
+        <a href="#thebar" data-bs-toggle="collapse" class="navbar-toggler">
+            <span class="navbar-toggler-icon" id="iconn"></span>
+        </a>
+        <div id="thebar" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link"><h2 id="mainitems">Home</h2></a>
+                </li>
+                <li class="nav-item">
+                    <a href="team.html" class="nav-link"><h2 id="mainitems" >Team</h2></a>
+                </li>
+                <li class="nav-item">
+                    <a href="eventpage.html" class="nav-link"><h2 id="mainitems">Event</h2></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link "><h2 id="mainitems">Learn-now</h2></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><h2 id="mainitems">3 in 3</h2></a>
+                </li>
+            </ul>
+        
+    </nav>
+    <footer class="bg-black" id="fotter">
+         
+        <section class="">
+            <div class="row" >
+              <div class="col-md-10 col-lg-10 col-xl-3 col-sm-12 m-5 " id="tedbottomlogo">
+                <h6 class="text-uppercase fw-bold  " style="width: 100px; height: 20px; margin-left: -30px;" id="details"><img src="tedlogo.svg"><span id="aastmt2">AASTMT</span><span><img src="logoaastmt6.jpg" alt="aastmt logo" style="width: 220px; left: 240px; position: absolute; margin-top: -30px; scale: 0.8;"></span></h6>
+                <span id="x">TEDxAASTMT, The Arab Academy based TEDx entity, believes that the thing about ideas is that they are the only true sustainable thing in our world. They don’t burn, collapse or even fade away. They are eternal. Ideas change lives and widen perspectives.
+                </span>
+              </div>
+              <div class="col-md-5 col-lg-3 col-xl-2 col-sm-6 mx-auto mb-4 mt-4">
+                <h6 class="text-uppercase fw-bold text-center mb-3" id="details">QUICK LINKS</h6>
+                <p class="text-center"><a href="" style="text-decoration: none; " id="detailss" >TED</a></p>
+                <p class="text-center"><a href="" style="text-decoration: none; " id="detailss">TEDX</a></p>
+                <p class="text-center"><a href="" style="text-decoration: none; " id="detailss">TED Blog</a></p>
+                <p class="text-center"><a href="" style="text-decoration: none; " id="detailss">License</a></p>
+              </div>
+    
+            <div class="col-md-5 col-lg-5 col-xl-2 col-sm-6 text-start  mt-5" id="details">
+              <p class="text-center"><a href="" style="text-decoration: none;" id="detailss">Contact Us</a></p>
+              <p class="text-center"><a href="" style="text-decoration: none;" id="detailss">Terms & Conditions</a></p>
+              <p class="text-center"><a href="" style="text-decoration: none;"id="detailss">Privacy Policy</a></p>
+              <p class="text-center"><a href="" style="text-decoration: none;"id="detailss">Get Involved</a></p> 
+            </div>
+            <div class="col-md-10 col-sm-12 col-lg-10 col-xl-4  mt-4">
+              
+              <h6 class="text-uppercase fw-bold text-start mb-3" id="details">STAY CONNECTED</h6>
+                <p class="text-start"><i class='lni lni-map-marker' id="loc" ></i><a href="https://maps.app.goo.gl/h4un1SvC1dtu6UCV7" style="text-decoration: none;" id="lastsection">Al Alameen City, El Alamein, Marsa Matrouh Governorate</a></p>
+                <p class="text-start"><i class='lni lni-phone-set' id="loc" ></i><a href="" style="text-decoration: none;" id="lastsection">+20 102 678 7677</a></p>
+                <p class="text-start"><i class='lni lni-envelope' id="loc" ></i><a href="" style="text-decoration: none;" id="lastsection">tedxaastmtxx@gmail.com</a></p> 
+              <section class="d-grid justify-content-center mt-5" style="scale: 2;">
+              <div id="sc-ic">
+                <a href="" class="me-3 ms-4 "id="details" style="text-decoration: none;">
+                  <i class="bx bxl-facebook" ></i>
+                </a>
+                <a href="" class="me-3"id="details" style="text-decoration: none;">
+                  <i class="bx bxl-twitter" ></i>
+                </a>
+                <a href="" class="me-3"id="details" style="text-decoration: none;">
+                  <i class="bx bxl-google" ></i>
+                </a>
+                <a href="" class="me-5"id="details" style="text-decoration: none;">
+                  <i class="bx bxl-instagram" ></i>
+                </a>
+              </div>
+            </section>
+          </div>
+
+          </div>
+
+        </section>
+      </footer>
+    </div>
+  </div>
+  
+  <div class="transition-logo">
+    <img src="tedlogo.svg" alt="TED Logo" ><span style="position: relative; left: 30%; scale: 4; color: white;" class="trans">AASTMT</span>
+</div>
+</body>
+</html>
