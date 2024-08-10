@@ -1841,9 +1841,14 @@ input[type="checkbox"]:checked + label + .content {
   body {
       overflow-x: hidden;
   }
+  body #logoimg{
+    left: 43%;
+  }
 }
 
-
+#logoimg{
+  width: 220px; left: 240px; position: absolute; margin-top: -30px; scale: 0.7;
+}
 html, body {
   max-width: 100% !important;
   overflow-x: hidden !important;
