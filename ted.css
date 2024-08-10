@@ -28,6 +28,15 @@
     width: 100%;
     z-index: 4;
 }
+@media (max-width: 768px) {
+  body #thebar{
+    width: 50%;
+  }
+  body .navbar-nav{
+    width: 50%;
+  }
+}
+
 #mainitems{
     font-size: 1.7em;
     font-weight: 700;
