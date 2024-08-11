@@ -404,6 +404,7 @@
       body .loader{
         scale:3;
         left: 40%;
+        top: 400%;
       }
       body #aboutbg2{
         height: 170vh;
@@ -938,6 +939,9 @@
 @media (max-width: 768px) {
   body #fotter {
       height: 145vh;
+  }
+  body #aboutbg2{
+    height: 150vh;
   }
 }
 @media (max-width: 1368px) and (min-width: 1200px) {
