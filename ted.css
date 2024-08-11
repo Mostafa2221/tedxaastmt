@@ -194,15 +194,6 @@
         background-color: rgba(0, 0, 0, .4) !important;
         backdrop-filter: saturate(180%) blur(10px);
     }
-    @media (max-width: 768px) {
-      body #menushadow {
-          height: 60px;
-          width: 40%; /* Example adjustment for smaller screens */
-      }
-      body .navbar-toggler .navbar-toggler-icon{
-        left: 50%;
-      }
-    }
     
     html, body {
         overflow-x: hidden;
@@ -359,6 +350,15 @@
         top: 2%;
         border-radius: 25%;
     }
+    @media (max-width: 768px) {
+      body #lightimg{
+        display: none;
+      }
+      body #tedoimg{
+        display: none;
+      }
+    }
+    
     #countdown{
         position: absolute;
         width: 50%;
