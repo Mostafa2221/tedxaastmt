@@ -197,7 +197,10 @@
     @media (max-width: 768px) {
       body #menushadow {
           height: 60px;
-          width: 50%; /* Example adjustment for smaller screens */
+          width: 40%; /* Example adjustment for smaller screens */
+      }
+      body .navbar-toggler .navbar-toggler-icon{
+        left: 30%;
       }
     }
     
