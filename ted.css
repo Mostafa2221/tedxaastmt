@@ -1661,11 +1661,11 @@ body #ideass{
   body #firstdialougg {
     font-size: 0.9em; /* Increase font size for better visibility on small screens */
     left: 5%; /* Adjust positioning for small screens */
-    top:50%;
+    top:70%;
 }
 body .book{
   scale: 1.5;
-  top: 70%;
+  top: 80%;
   left: 35%;
 }
 }
