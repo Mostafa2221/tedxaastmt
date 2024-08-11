@@ -390,12 +390,14 @@
       body .loader{
         scale:3;
         left: 40%;
-        margin-top: -30px;
       }
       body #aboutbg2{
         height: 170vh;
       }
-      
+      body #slogan{
+        font-size: 2.5em;
+        left: 10px;
+      }
     }
     
     /* Adjust height on smaller screens */
