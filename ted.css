@@ -1583,6 +1583,7 @@ body #ideass{
   width: 100%;
   height: 550vh;
   background-color: white;
+  margin-top: -70px;
 }
 #hr1{
   color: white;
@@ -1630,7 +1631,7 @@ body #ideass{
     z-index: 2;
   }
   body #learncontent {
-      height: 1090vh;
+      height: 700vh;
   }
   body #firstdialoug {
       font-size: 0.8em;
