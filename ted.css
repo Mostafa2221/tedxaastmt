@@ -2127,6 +2127,9 @@ body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 @media (max-width: 768px){
+  #contentoo{
+    height: 300vh;
+  }
   #_3in3bg{
     height: 90vh;
   }
@@ -2137,7 +2140,7 @@ body{
     left:1%;
     width: 80%;
     top: 15%;
-    color: white;
+    color:brown;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   #_3in3bg ul{
@@ -2157,7 +2160,7 @@ body{
     left:1%;
     width: 80%;
     top: 8%;
-    color: white;
+    color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 }
