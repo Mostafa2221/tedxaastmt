@@ -456,7 +456,6 @@
         right: 18%;
         margin-top: 150px;
         scale: 5;
-        display: none;
       }
       .loader__bar {
         position: absolute;
@@ -703,7 +702,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  scale: 2.8;
+  scale: 2.7;
 }
 
 #countdown > h1 {
@@ -894,6 +893,12 @@
   -o-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
+@media screen and (max-width: 768px) {
+  #countdown {
+  width: 30%;
+  scale: 1.7;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .countdown__container {
@@ -978,10 +983,6 @@
 
 @media (max-width: 868px) and (min-width: 768px) {
 
-  #countdown{
-    left: 150px;
-
-  }
   body #tedxaastmtabout{
     height: 120vh;
   }
@@ -995,10 +996,7 @@
 @media (max-width: 768px) {
 
 
-  #countdown{
-    left: 130px;
-    scale: 2.3;
-  }
+ 
   #x{
     left: -50px;
     font-size: 0.9em;
@@ -1024,10 +1022,7 @@
   }
 }
 @media (max-width: 668px) and (min-width: 568px) {
-  #countdown{
-    left: 100px;
-    scale: 2;
-  }
+ 
   #x{
     left: -50px;
     font-size: 0.9em;
@@ -1050,10 +1045,7 @@ body #ideass{
 
 }
 @media (max-width: 500px) {
-  #countdown{
-    left: 70px;
-    scale: 2;
-  }
+  
   
 body #tedxaastmtabout{
   height: 160vh;
