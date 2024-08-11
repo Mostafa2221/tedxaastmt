@@ -2040,7 +2040,7 @@ body{
   height: 450vh;
 }
   #healthimg{
-  margin-top: 100px;
+  margin-top: 250px;
   scale: 0.9;
   position: relative;
   left: -10%;
@@ -2052,7 +2052,7 @@ body{
 }
 #knowimg{
   
-  top: 650px;
+  top: 800px;
   scale: 0.9;
   position: relative;
 
@@ -2061,7 +2061,7 @@ body{
 }
 #moneyimg{
   
-  margin-top: 50px;
+  margin-top: 200px;
   scale: 0.9;
   position: relative;
   left: 0%;
@@ -2078,9 +2078,10 @@ body{
   width: 100%;
   
   position: relative;
-  top: -400px;
+  top: -250px;
 }
 #money-txt{
   width: 100%;
+  margin-top: 150px;
 }
 }
