@@ -2085,3 +2085,79 @@ body{
   margin-top: 150px;
 }
 }
+#_3in3bg{
+  background-image: url('take3.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  
+}
+#_3in3bg p{
+  font-size: 1em;
+  font-weight: 700;
+  position: relative;
+  left:1%;
+  width: 40%;
+  top: 10%;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#_3in3bg ul{
+  font-size: 1.3em;
+  font-weight: 700;
+  position: relative;
+  left:1%;
+  width: 40%;
+  color: rgb(250, 100, 100);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#_3in3bg h5{
+  font-size: 1em;
+  font-weight: 700;
+  position: relative;
+  left:1%;
+  width: 30%;
+  top: 5%;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@media (max-width: 768px){
+  #_3in3bg{
+    height: 90vh;
+  }
+  #_3in3bg p{
+    font-size: 0.8em;
+    font-weight: 700;
+    position: relative;
+    left:1%;
+    width: 80%;
+    top: 15%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  #_3in3bg ul{
+    font-size: 1em;
+    font-weight: 700;
+    position: relative;
+    left:1%;
+    top: 5%;
+    width: 80%;
+    color: rgb(250, 100, 100);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  #_3in3bg h5{
+    font-size: 0.8em;
+    font-weight: 700;
+    position: relative;
+    left:1%;
+    width: 80%;
+    top: 8%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+}
