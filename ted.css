@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel:wght@300;400;500;600&family=Poppins:wght@200;300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@200;300;400;500;600&display=swap");
 
-
-
 #homebg{
     background-image: url('images/homebg.jpg');
     background-size: cover;
@@ -151,7 +149,6 @@
         position: absolute;
         left: 20px;
         margin-top: 20px;
-        display: none;
         
     }
     #aboutdesc{
@@ -163,7 +160,6 @@
         margin-top: 120px;
         font-family:sans-serif;
         width: 45%;
-        display: none;
     }
     #aboutted{
         color: red;
@@ -172,7 +168,6 @@
         position: absolute;
         right: 500px;
         margin-top: 300px;
-        display: none;
     }
   
     
@@ -185,7 +180,6 @@
         margin-top: 380px;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         width: 45%;
-        display: none;
     }
       @media (max-width: 768px) {
       body #aboutted {
@@ -462,6 +456,7 @@
         right: 18%;
         margin-top: 150px;
         scale: 5;
+        display: none;
       }
       .loader__bar {
         position: absolute;
@@ -709,6 +704,7 @@
   justify-content: center;
   align-items: center;
   scale: 2.7;
+  display: none;
 }
 
 #countdown > h1 {
@@ -937,6 +933,8 @@
 }
 #fotter{
   height: 50vh;
+  
+
 
 }
 @media (max-width: 768px) {
