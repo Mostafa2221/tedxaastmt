@@ -24,6 +24,11 @@ $(document).ready(function() {
                 $('.transition-logo').removeClass('is-exiting').addClass('is-entering');
                 $container.html($newContent);
                 $newContent.addClass('is-loaded'); // Ensure new content is loaded
+
+                // Check if the new content is the team page
+                if ($newContent.find('#team-page').length > 0) {
+                    location.reload(); // Refresh the page
+                }
             }
         },
         onAfter: function($container, $newContent) {
