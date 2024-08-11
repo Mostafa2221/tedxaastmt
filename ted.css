@@ -375,26 +375,38 @@
         color: tomato;
         font-family:fantasy;
     }
+  
     body #aboutbg2 {
         background-color: black;
         margin-top: -150px;
         height: 140vh;
         display: block;
     }
+    @media (max-width: 768px) {
+      body #eventcount {
+          scale: 1.8;
+          left: 70%;
+      }
+      body .loader{
+        scale:3;
+        left: 40%;
+        margin-top: -30px;
+      }
+      body #aboutbg2{
+        height: 170vh;
+      }
+      
+    }
     
     /* Adjust height on smaller screens */
     @media (max-width: 768px) {
-        body #aboutbg2 {
-            height: 215vh;
-        }
+
         body #marketingimg p{
           width: 80%;
         }
     }
     @media (max-width: 1168px) and (min-width:768px) {
-      body #aboutbg2 {
-          height: 210vh;
-      }
+     
       body #Learn-nowbg{
         height: 220vh;
       }
