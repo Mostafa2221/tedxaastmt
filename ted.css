@@ -1121,6 +1121,17 @@ body #ideass{
   position: absolute;
   margin-top: 350px;
 }
+@media (max-width: 768px) {
+  body #orr {
+      font-size: 2em; /* Increase font size for better visibility on small screens */
+      margin-top: 800px; /* Adjust positioning for small screens */
+  }
+  body #ideass{
+    font-size: 2em; /* Increase font size for better visibility on small screens */
+    margin-top: 900px; /* Adjust positioning for small screens */
+  
+  }
+}
 #ideass{
   font-size: 2em;
   font-weight: 700;
