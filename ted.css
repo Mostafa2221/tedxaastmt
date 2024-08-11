@@ -1309,6 +1309,7 @@ body #ideass{
   top: 70%;
 }
 
+
 :root {
 	--hue: 223;
 	--bg: hsl(var(--hue),10%,90%);
@@ -1651,7 +1652,23 @@ body #ideass{
   }
 }
 
-
+@media (max-width: 768px) {
+  body #firstdialoug {
+      font-size: 0.9em; /* Increase font size for better visibility on small screens */
+      left: 5%; /* Adjust positioning for small screens */
+      top: 20%;
+  }
+  body #firstdialougg {
+    font-size: 0.9em; /* Increase font size for better visibility on small screens */
+    left: 5%; /* Adjust positioning for small screens */
+    top:50%;
+}
+body .book{
+  scale: 1.5;
+  top: 70%;
+  left: 35%;
+}
+}
 /* .head{
   padding: 20px;
   margin-top: 4px;
