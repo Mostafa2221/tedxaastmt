@@ -171,6 +171,8 @@
         right: 500px;
         margin-top: 300px;
     }
+  
+    
     #abouteddesc{
         color: white;
         font-size: 1em;
@@ -181,6 +183,18 @@
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         width: 45%;
     }
+      @media (max-width: 768px) {
+      body #aboutted {
+          font-size: 2em; /* Increase font size for better visibility on small screens */
+          margin-top: 360px; /* Adjust positioning for small screens */
+      }
+     body #abouteddesc{
+        font-size: 1em;
+        margin-top: 480px;
+        width: 90%;
+      
+    }
+  }
     #tedlinks{
         color: red;
     }
@@ -921,6 +935,11 @@
 
 
 }
+@media (max-width: 768px) {
+  body #fotter {
+      height: 145vh;
+  }
+}
 @media (max-width: 1368px) and (min-width: 1200px) {
   body #fotter {
       height: 60vh;
@@ -954,9 +973,7 @@
 }
 
 @media (max-width: 868px) and (min-width: 768px) {
-  body #fotter {
-      height: 170vh;
-  }
+
   #countdown{
     left: 150px;
 
@@ -972,10 +989,7 @@
   }
 }
 @media (max-width: 768px) {
-  body #fotter {
-      height: 160vh;
-      
-  }
+
 
   #countdown{
     left: 130px;
@@ -1014,17 +1028,11 @@
     left: -50px;
     font-size: 0.9em;
   }
-  body #fotter {
-    height: 135vh;
-    
-}
+  
 
 }
 @media (max-width: 610px) {
-  body #fotter {
-    height: 155vh;
-    
-}
+
 body #tedxaastmtabout{
   height: 160vh;
 }
@@ -1042,10 +1050,7 @@ body #ideass{
     left: 70px;
     scale: 2;
   }
-  body #fotter {
-    height: 160vh;
-    
-}
+  
 body #tedxaastmtabout{
   height: 160vh;
 }
