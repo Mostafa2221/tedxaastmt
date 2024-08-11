@@ -27,7 +27,6 @@
     left: 0;
     width: 100%;
     z-index: 4;
-    display: none;
 }
 #mainitems{
     font-size: 1.7em;
@@ -200,7 +199,7 @@
         color: red;
     }
     #menushadow{
-      display: none;
+      display: block;
         position: fixed;
         top: 0;
         width: 100%;
@@ -934,6 +933,7 @@
 }
 #fotter{
   height: 50vh;
+  display: none;
 
 
 }
