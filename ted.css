@@ -1666,7 +1666,7 @@ body #ideass{
 body .book{
   scale: 1.5;
   top: 80%;
-  left: 35%;
+  left: 35%; /* Adjust positioning for small screens */
 }
 }
 /* .head{
@@ -1674,7 +1674,7 @@ body .book{
   margin-top: 4px;
   font-size: 20px;
 } */
- 
+
  /* .img_col{
   width: 60%;
   padding: 20px;
