@@ -3,7 +3,7 @@ $(document).ready(function() {
         prefetch: true,
         cacheLength: 2,
         onStart: {
-            duration: 2000, // Adjust duration to match CSS transition
+            duration: 1500, // Adjust duration to match CSS transition
             render: function ($container) {
                 console.log('Transition start');
                 $container.addClass('is-exiting');
@@ -26,8 +26,8 @@ $(document).ready(function() {
                 $newContent.addClass('is-loaded'); // Ensure new content is loaded
 
                 // Check if the new content is the team page
-                if ($newContent.find('#team-page').length > 0) {
-                    location.reload(); // Refresh the page
+                if (window.location.href.indexOf('team') > -1) {
+                    window.location.reload(); // Refresh the page
                 }
             }
         },

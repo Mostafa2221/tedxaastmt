@@ -391,7 +391,7 @@
     body #aboutbg2 {
         background-color: black;
         margin-top: -150px;
-        height: 140vh;
+        height: 130vh;
         display: block;
     }
     @media (max-width: 768px) {
@@ -438,7 +438,7 @@
 
     @media (max-width: 2368px) and (min-width: 1300px) {
       body #aboutbg2 {
-        height: 170vh;
+        height: 120vh;
     }
     body #learncontent {
       height: 560vh;
