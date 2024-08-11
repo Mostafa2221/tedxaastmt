@@ -1631,7 +1631,7 @@ body #ideass{
     z-index: 2;
   }
   body #learncontent {
-      height: 930vh;
+      height: 910vh;
       
   }
   body #firstdialoug {
@@ -2160,7 +2160,7 @@ body{
     left:1%;
     width: 80%;
     top: 8%;
-    color: black;
+    color: brown;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 }
