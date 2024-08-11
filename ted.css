@@ -134,7 +134,7 @@
         font-weight: 700;
         color: #fff;
         z-index: 2;
-        
+        display: none;
     }
     @media (max-width: 1400px){
         #slogan {
@@ -933,9 +933,6 @@
 }
 #fotter{
   height: 50vh;
-  display: none;
-
-  
 
 }
 @media (max-width: 768px) {
