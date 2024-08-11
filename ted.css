@@ -54,7 +54,7 @@
         z-index: 5;  
         color: #fff;
         border-radius: 20%;
-        scale: 1.7;
+        scale: 1.6;
         margin: 12px;
 
     }
@@ -403,7 +403,7 @@
         scale:3;
         left: 40%;
         top: 375%;
-        
+
       }
       body #aboutbg2{
         height: 170vh;
