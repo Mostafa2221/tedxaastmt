@@ -134,7 +134,7 @@
         font-weight: 700;
         color: #fff;
         z-index: 2;
-        display: none;
+        
     }
     @media (max-width: 1400px){
         #slogan {
@@ -151,6 +151,7 @@
         position: absolute;
         left: 20px;
         margin-top: 20px;
+        display: none;
         
     }
     #aboutdesc{
@@ -162,6 +163,7 @@
         margin-top: 120px;
         font-family:sans-serif;
         width: 45%;
+        display: none;
     }
     #aboutted{
         color: red;
@@ -170,6 +172,7 @@
         position: absolute;
         right: 500px;
         margin-top: 300px;
+        display: none;
     }
   
     
@@ -182,6 +185,7 @@
         margin-top: 380px;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         width: 45%;
+        display: none;
     }
       @media (max-width: 768px) {
       body #aboutted {
