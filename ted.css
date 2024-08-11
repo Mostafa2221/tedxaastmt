@@ -1919,3 +1919,168 @@ html, body {
   max-width: 100% !important;
   overflow-x: hidden !important;
 }
+
+
+#health{
+  margin-top: 60px;
+  width: 100%;
+  background-color: black;
+  height: 550px;
+  display: flex;
+}
+#health-txt{
+  width: 50%;
+  height:  100% ;
+  background-color:black;
+  flex-direction: column;
+  padding: 14px;
+  color: white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#health-txt h1{
+  font-size: 32px;
+  color:#bea5a5;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+
+#health-txt p{
+  margin-left: 60px;
+  color: #fff;
+}
+#know{
+  margin-top: -100px;
+  width: 100%;
+  background-color: black;
+  height: 650px;
+  display: flex;
+
+}
+#know-txt{
+  width: 50%;
+  height:  100% ;
+  background-color: black;
+  color: whitesmoke;
+  flex-direction: column;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#know-txt h1{
+  font-size: 32px;
+  color: #7b5032;
+  font-weight: bold;
+  padding: 60px;
+  text-align: center;
+}
+
+#know-txt p{
+  margin-left: 60px;
+}
+
+
+#money{
+  margin-top: -50px;
+  width: 100%;
+  background-color: black;
+  height: 650px;
+  display: flex;
+  margin-bottom: 120px;
+
+}
+#money-txt{
+  width: 50%;
+  height:  100% ;
+  background-color: black;
+  color: whitesmoke;
+  flex-direction: column;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#money-txt h1{
+  font-size: 32px;
+  color: #7b5032;
+  font-weight: bold;
+  padding: 60px;
+  text-align: center;
+}
+
+#money-txt p{
+  margin-left: 60px;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+#healthimg{
+  margin: 50px;
+  width: 600px;
+  height: 400px;
+}
+#knowimg{
+  margin-top: 100px;
+  width: 600px;
+  height: 400px;
+}
+#moneyimg{
+  margin-top: 50px;
+  width: 600px;
+  height: 400px;
+  margin-left: 50px;
+}
+#contentoo{
+  height: 280vh;
+}
+@media (max-width: 768px){
+#contentoo{
+  height: 450vh;
+}
+  #healthimg{
+  margin-top: 100px;
+  scale: 0.9;
+  position: relative;
+  left: -10%;
+  width: 450px;
+  height: 300px;
+}
+#know{
+  margin-top: 250px;
+}
+#knowimg{
+  
+  top: 650px;
+  scale: 0.9;
+  position: relative;
+
+  width: 450px;
+  height: 300px;
+}
+#moneyimg{
+  
+  margin-top: 50px;
+  scale: 0.9;
+  position: relative;
+  left: 0%;
+  width: 450px;
+  height: 300px;
+}
+#money{
+  margin-top: 350px;
+}
+#health-txt{
+  width: 100%;
+}
+#know-txt{
+  width: 100%;
+  
+  position: relative;
+  top: -400px;
+}
+#money-txt{
+  width: 100%;
+}
+}
